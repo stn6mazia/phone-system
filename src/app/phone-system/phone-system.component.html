@@ -1,0 +1,81 @@
+<div id="main" class="wrapper page">
+    <div class="container center full-height">
+        <div class="row pb-16">
+            <div class="col pr-16">
+                <span class="f-32"> <i class="fas fa-mobile-alt"></i> FALE MUITO <i class="fas fa-mobile-alt"></i>
+                </span>
+            </div>
+        </div>
+        <div class="row pb-48">
+            <div class="col">
+                <span class="f-24">Veja quanto você pode economizar com nossos serviços</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="f-16">De qual região você vai falar?</span>
+            </div>
+        </div>
+        <div class="row pt-32">
+            <div class="col">
+                <select class="text" #originInput (input)="setOriginValue(originInput.value)">
+                    <option value="" selected></option>
+                    <option *ngFor="let origin of placesAndFares" value="{{origin | json}}">{{origin.location}} -
+                        ({{origin.ddd}})</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="text" #destinationInput (input)="setDestinationValue(destinationInput.value)">
+                    <option value="" selected></option>
+                    <option value="{{destination | json}}" *ngFor="let destination of avaliableDestiations">{{destination.location}} -
+                        ({{destination.ddd}})</option>
+                </select>
+            </div>
+        </div>
+        <div class="row pt-24" *ngIf="selectedValues">
+            <div class="col">
+                <span class="f-16">Quanto tempo pretende falar?</span>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-16" *ngIf="selectedValues">
+            <div class="col-6">
+                <input type="tel" class="text" #timeInput (input)="checkTimeAndPlace(timeInput.value)">
+                <br>
+                <small class="alert f-16" *ngIf="wrongTime">O campo só pode ser preenchido com números</small>
+            </div>
+        </div>
+
+        <div class="row pt-48" *ngIf="showBtn">
+            <div class="col pt-48">
+                <button (click)="countValues()" class="btn btn-default">CALCULAR VALORES</button>
+            </div>
+        </div>
+
+        <div class="row pt-48" *ngIf="showList">
+            <div class="col" *ngFor="let plan of plans">
+                <div class="plan-box center">
+                    <span class="f-24">{{plan.name}}</span>
+                    <br>
+                    <br>
+                    <span class="f-48"><strong>{{plan.minutes}}</strong></span>
+                    <br>
+                    <span class="f-32">MINUTOS GRÁTIS</span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="f-24">Falando {{selectedTime}} minutos</span>
+                    <br>
+                    <span class="f-16">De: {{selectedOriginName}} - Para: {{selectedDestinationName}} </span>
+                    <br>
+                    <br>
+                    <span class="f-24" *ngIf="plan.minutes == 120 && finalResults.oneHundredAndTwentyValue > 0"> {{finalResults.oneHundredAndTwentyValue | currencyFormat}} </span>
+                    <span class="f-24" *ngIf="plan.minutes == 120 && finalResults.oneHundredAndTwentyValue == 0"> Sem custo </span>
+                    <span class="f-24" *ngIf="plan.minutes == 60 && finalResults.sixtyValue > 0"> {{finalResults.sixtyValue | currencyFormat}} </span>
+                    <span class="f-24" *ngIf="plan.minutes == 60 && finalResults.sixtyValue == 0"> Sem custo </span>
+                    <span class="f-24" *ngIf="plan.minutes == 30 && finalResults.thirtyValue > 0"> {{finalResults.thirtyValue | currencyFormat}} </span>
+                    <span class="f-24" *ngIf="plan.minutes == 30 && finalResults.thirtyValue == 0"> Sem custo </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

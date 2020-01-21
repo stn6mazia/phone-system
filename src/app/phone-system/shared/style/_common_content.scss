@@ -1,0 +1,297 @@
+.wrapper {
+    padding-top: 32px;
+    padding-bottom: 64px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F8F8F8;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.basic-padding {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.pl-0 {
+    padding-left: 0px !important;
+}
+
+.pl-8 {
+    padding-left: 8px !important;
+}
+
+.pl-16 {
+    padding-left: 16px !important;
+}
+
+.pl-24 {
+    padding-left: 24px !important;
+}
+
+.pl-32 {
+    padding-left: 32px !important;
+}
+
+.pl-48 {
+    padding-left: 48px !important;
+}
+
+.pr-0 {
+    padding-right: 0px !important;
+}
+
+.pr-8 {
+    padding-right: 8px !important;
+}
+
+.pr-16 {
+    padding-right: 16px !important;
+}
+
+.pr-24 {
+    padding-right: 24px !important;
+}
+
+.pr-32 {
+    padding-right: 32px !important;
+}
+
+.pr-48 {
+    padding-right: 48px !important;
+}
+
+.pt-0 {
+    padding-top: 0px !important;
+}
+
+.pt-8 {
+    padding-top: 8px !important;
+}
+
+.pt-16 {
+    padding-top: 16px !important;
+}
+
+.pt-24 {
+    padding-top: 24px !important;
+}
+
+.pt-32 {
+    padding-top: 32px !important;
+}
+
+.pt-40 {
+    padding-top: 40px !important;
+}
+
+.pt-48 {
+    padding-top: 48px !important;
+}
+
+.pb-0 {
+    padding-bottom: 0px !important;
+}
+
+.pb-8 {
+    padding-bottom: 8px !important;
+}
+
+.pb-16 {
+    padding-bottom: 16px !important;
+}
+
+.pb-24 {
+    padding-bottom: 24px !important;
+}
+
+.pb-32 {
+    padding-bottom: 32px !important;
+}
+
+.pb-48 {
+    padding-bottom: 48px !important;
+}
+
+.f-6 {
+    font-size: 6px;
+}
+
+.f-8 {
+    font-size: 8px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.f-24 {
+    font-size: 24px;
+}
+
+.f-32 {
+    font-size: 32px;
+}
+
+.f-40 {
+    font-size: 40px;
+}
+
+.f-48 {
+    font-size: 48px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    color: $default-light-orange;
+}
+
+.under-line {
+    text-decoration: underline;
+}
+
+.unfocus-text {
+    color: $default-light-gray
+}
+
+.white {
+    background-image: linear-gradient($default-white, $default-gray);
+    color: $default-black;
+}
+
+.gray {
+    background-image: linear-gradient($default-gray, $default-white);
+    color: $default-black;
+}
+
+.yellow {
+    background-image: linear-gradient(rgb(245, 245, 119), rgb(218, 143, 6));
+    color: $default-black;
+}
+
+.orange {
+    background-image: linear-gradient(rgb(218, 143, 6), rgb(245, 245, 119));
+    color: $default-black;
+}
+
+.blue {
+    background-image: linear-gradient(blue, pink);
+    color: $default-white;
+}
+
+.pink {
+    background-image: linear-gradient(rgb(240, 111, 201), rgb(181, 181, 255));
+    color: $default-black;
+}
+
+.purple {
+    background-image: linear-gradient(rgb(105, 9, 105), rgb(135, 216, 135));
+    color: $default-white;
+}
+
+.green {
+    background-image: linear-gradient(rgb(0, 131, 70), rgb(84, 0, 100));
+    color: $default-white;
+}
+
+.black-white {
+    background-image: linear-gradient(black, white);
+    color: $default-white;
+}
+
+.black-gray {
+    background-image: linear-gradient(black, $default-gray);
+    color: $default-white;
+}
+
+.black-yellow {
+    background-image: linear-gradient(black, yellow);
+    color: $default-white;
+}
+
+.black-orange {
+    background-image: linear-gradient(black, orange);
+    color: $default-white;
+}
+
+.black-blue {
+    background-image: linear-gradient(black, blue);
+    color: $default-white;
+}
+
+.black-pink {
+    background-image: linear-gradient(black, rgb(243, 19, 187));
+    color: $default-white;
+}
+
+.black-purple {
+    background-image: linear-gradient(black, purple);
+    color: $default-white;
+}
+
+.black-green {
+    background-image: linear-gradient(black, green);
+    color: $default-white;
+}
+
+.black-red {
+    background-image: linear-gradient(black, red);
+    color: $default-white;
+}
+
+.red {
+    background-image: linear-gradient(red, rgb(126, 0, 0));
+    color: $default-white;
+}

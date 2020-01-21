@@ -1,0 +1,12 @@
+@import './shared/style/mixxins';
+#main {
+    background-color: $default-black;
+    color: $default-white;
+}
+
+.plan-box {
+    border: solid 1px $default-orange;
+    background-color: $default-black;
+    color: $default-white;
+    padding: 24px 16px 24px 16px;
+}
